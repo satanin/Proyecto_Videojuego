@@ -8,7 +8,9 @@ public class Principal {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JuegoWB frame = new JuegoWB();
+					Mapas esteMapa = new Mapas();
+					String m[][] = esteMapa.devuelveMapa();
+					JuegoWB frame = new JuegoWB(m);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();

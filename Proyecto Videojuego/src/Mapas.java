@@ -13,7 +13,7 @@ private String pintarMapa[]={"Suelo.png","Pared01.png","Pared02.png","Pared03.pn
 		// TODO Auto-generated constructor stub
 		int i=0,j=0;
 		try{
-			leeFichero = new Scanner ( new File ("./media/map"));
+			leeFichero = new Scanner ( new File ("src/media/map"));
 			
 			while(leeFichero.hasNext()){
 				
@@ -28,9 +28,11 @@ private String pintarMapa[]={"Suelo.png","Pared01.png","Pared02.png","Pared03.pn
 				
 			}
 			
-			
+			leeFichero.close();
 		}catch (FileNotFoundException fileNotFoundException){
 			System.out.println("No encuentro el archivo de mapas!");
+		}catch (Exception e){
+			System.out.println("Falla al leer mapa");
 		}
 	}
 
