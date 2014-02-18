@@ -51,14 +51,17 @@ public class Mapa {
 							}														
 							
 	
-						}					
+						}	
+						// Actualizo las variables 
 						quedanx = quedanx - tamanyoHab;
 						posj = posj + tamanyoHab;
 					}
+					// Actualizo variables.
 					posi = posi+10;
 					quedany = quedany-10;
 				}
 			}
+			// Imprimo el mapa para ver como es.
 			for (int k=0;k<miMapa.length;k++){
 				for (int l=0;l<miMapa.length;l++){
 					System.out.print(miMapa[k][l]);
