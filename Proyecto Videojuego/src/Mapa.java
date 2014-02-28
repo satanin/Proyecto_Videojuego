@@ -67,6 +67,12 @@ public class Mapa {
 					System.out.print(miMapa[k][l]);
 				}System.out.println();
 			}
+			int n=0; 
+			for (int i=0 ; i<5 ; i++ ) {
+			    n= n+2;
+			    System.out.println(n);
+			}
+
 		
 		}
 		catch (Exception e){
