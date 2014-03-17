@@ -66,6 +66,7 @@ public class GameScreen implements Screen {
 		game.batch.begin();
 		
 		game.batch.draw(miDiana, diana.x, diana.y);
+		
 		if(Gdx.input.isTouched()){
 			miSound.play();
 			game.batch.draw(miFondo, fondo.x, fondo.y);
