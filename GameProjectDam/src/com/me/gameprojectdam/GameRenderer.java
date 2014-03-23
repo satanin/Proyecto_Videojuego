@@ -31,9 +31,8 @@ public class GameRenderer implements Disposable{
 		gC.gcCamera.moverCamera(camera);
 		
 		batch.begin();
+			gC.mapa.draw(batch);
 			gC.cubo.draw(batch);
-			gC.platStatic1.draw(batch);
-			gC.platStatic2.draw(batch);
 		batch.end();
 		
 		

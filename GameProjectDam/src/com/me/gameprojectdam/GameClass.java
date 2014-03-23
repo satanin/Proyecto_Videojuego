@@ -30,7 +30,7 @@ public class GameClass implements ApplicationListener {
 	public void render() {		
 		gameController.update(Gdx.graphics.getDeltaTime());
 		// Establecer el color del fondo de la pantalla y el alpha
-		Gdx.gl.glClearColor(0.64f, 0.95f, 0.95f, 1);
+		Gdx.gl.glClearColor(0f, 0f, 0f, 1);
 		// Limpiar la pantalla
 		Gdx.gl.glClear(GL10.GL_COLOR_BUFFER_BIT);
 		// Renderizar
