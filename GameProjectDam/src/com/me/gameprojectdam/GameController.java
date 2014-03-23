@@ -65,16 +65,48 @@ public class GameController extends InputAdapter {
 	private void hldKeys(float deltaTime){
 		float moveSpeed = 100*deltaTime;
 		if(Gdx.input.isKeyPressed(Keys.A)|Gdx.input.isKeyPressed(Keys.LEFT)){
-			moveCube(-moveSpeed,0);			
+			moveCube(-moveSpeed,0);
+			if(cubo.getRotation()!=90f){
+				cubo.setRotation(90f);
+			}
 		}
 		if(Gdx.input.isKeyPressed(Keys.W)|Gdx.input.isKeyPressed(Keys.UP)){
 			moveCube(0,moveSpeed);
+			if(cubo.getRotation()!=0){
+				cubo.setRotation(0f);
+			}
 		}
 		if(Gdx.input.isKeyPressed(Keys.S)|Gdx.input.isKeyPressed(Keys.DOWN)){
 			moveCube(0,-moveSpeed);
+			if(cubo.getRotation()!=180){
+				cubo.setRotation(180f);;
+			}
 		}
 		if(Gdx.input.isKeyPressed(Keys.D)|Gdx.input.isKeyPressed(Keys.RIGHT)){
 			moveCube(moveSpeed,0);
+			if(cubo.getRotation()!=270){
+				cubo.setRotation(270f);
+			}
+		}
+		if((Gdx.input.isKeyPressed(Keys.A)|Gdx.input.isKeyPressed(Keys.LEFT) )&& (Gdx.input.isKeyPressed(Keys.W)|Gdx.input.isKeyPressed(Keys.UP))){
+			if(cubo.getRotation()!=45f){
+				cubo.setRotation(45f);
+			}
+		}
+		if((Gdx.input.isKeyPressed(Keys.W)|Gdx.input.isKeyPressed(Keys.UP) )&& (Gdx.input.isKeyPressed(Keys.D)|Gdx.input.isKeyPressed(Keys.RIGHT))){
+			if(cubo.getRotation()!=305f){
+				cubo.setRotation(305f);
+			}
+		}
+		if((Gdx.input.isKeyPressed(Keys.S)|Gdx.input.isKeyPressed(Keys.DOWN) )&& (Gdx.input.isKeyPressed(Keys.D)|Gdx.input.isKeyPressed(Keys.RIGHT))){
+			if(cubo.getRotation()!=225){
+				cubo.setRotation(225f);
+			}
+		}
+		if((Gdx.input.isKeyPressed(Keys.S)|Gdx.input.isKeyPressed(Keys.DOWN) )&& (Gdx.input.isKeyPressed(Keys.A)|Gdx.input.isKeyPressed(Keys.LEFT))){
+			if(cubo.getRotation()!=135f){
+				cubo.setRotation(135f);
+			}
 		}
 	}
 	
