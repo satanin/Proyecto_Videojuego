@@ -74,7 +74,7 @@
             <key>width</key>
             <int>1024</int>
             <key>height</key>
-            <int>1024</int>
+            <int>2048</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -177,6 +177,8 @@
             <filename>personaje03.png</filename>
             <filename>personaje04.png</filename>
             <filename>personaje05.png</filename>
+            <filename>fondo_lvl2.png</filename>
+            <filename>zombie00.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

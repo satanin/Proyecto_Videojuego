@@ -18,7 +18,7 @@ fondo_lvl2
   index: -1
 personaje00
   rotate: false
-  xy: 870, 68
+  xy: 936, 68
   size: 56, 40
   orig: 64, 64
   offset: 4, 12
@@ -39,7 +39,7 @@ personaje02
   index: -1
 personaje03
   rotate: false
-  xy: 870, 68
+  xy: 936, 68
   size: 56, 40
   orig: 64, 64
   offset: 4, 12
@@ -55,6 +55,13 @@ personaje05
   rotate: false
   xy: 804, 2
   size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+zombie00
+  rotate: false
+  xy: 870, 68
+  size: 64, 52
   orig: 64, 64
   offset: 0, 0
   index: -1

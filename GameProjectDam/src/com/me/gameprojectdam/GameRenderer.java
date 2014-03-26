@@ -1,5 +1,6 @@
 package com.me.gameprojectdam;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.Disposable;
@@ -32,7 +33,9 @@ public class GameRenderer implements Disposable{
 		
 		batch.begin();
 			gC.mapa.draw(batch);
-			gC.cubo.draw(batch);
+			gC.personaje.draw(batch);
+			gC.zombieMovement(Gdx.graphics.getDeltaTime());
+			gC.zombie01.draw(batch);
 		batch.end();
 		
 		
