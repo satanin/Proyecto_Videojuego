@@ -1,0 +1,67 @@
+textureAtlas.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fondo_lvl1
+  rotate: false
+  xy: 2, 804
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1
+fondo_lvl2
+  rotate: false
+  xy: 2, 2
+  size: 800, 800
+  orig: 800, 800
+  offset: 0, 0
+  index: -1
+personaje00
+  rotate: false
+  xy: 936, 68
+  size: 56, 40
+  orig: 64, 64
+  offset: 4, 12
+  index: -1
+personaje01
+  rotate: false
+  xy: 804, 68
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+personaje02
+  rotate: false
+  xy: 936, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+personaje03
+  rotate: false
+  xy: 936, 68
+  size: 56, 40
+  orig: 64, 64
+  offset: 4, 12
+  index: -1
+personaje04
+  rotate: false
+  xy: 870, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+personaje05
+  rotate: false
+  xy: 804, 2
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+zombie00
+  rotate: false
+  xy: 870, 68
+  size: 64, 52
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
