@@ -31,6 +31,7 @@ public class GameController extends InputAdapter {
 		hldKeys(deltaTime);
 		zombieMovement(deltaTime);
 		gcCamera.update();
+		muerte();
 		
 	}
 	
@@ -121,48 +122,72 @@ public class GameController extends InputAdapter {
 	}
 	private float moviZombieX(){
 		float move = 1f;
-		if((personaje.getOriginX()-zombie01.getOriginX())>0){
+		if((personaje.getX()-zombie01.getX())>0){
 			return move;
-		}else if ((personaje.getOriginX()-zombie01.getOriginX())<0){
+		}else if ((personaje.getX()-zombie01.getX())<0){
 			return -move;
 		}else return 0f;
 	}
 	
 	private float moviZombieY(){
 		float move = 1f;
-		if((personaje.getOriginY()-zombie01.getOriginY())>0){
+		if((personaje.getY()-zombie01.getY())>0){
 			return move;
-		}else if ((personaje.getOriginY()-zombie01.getOriginY())<0){
+		}else if ((personaje.getY()-zombie01.getY())<0){
 			return -move;
 		}else return 0f;
 	}
 	
 	public void zombieMovement(float deltaTime){
 		
-		float moveSpeed2 = 20*deltaTime;
+		float moveSpeed2 = 40*deltaTime;
 		float moveX, moveY;
 		moveX = moviZombieX()*moveSpeed2;
 		moveY = moviZombieY()*moveSpeed2;
 		
 		moveZombie01(moveX,moveY);
-		
-		if (moveX<0){
-			if(moveY>0){
-				zombie01.setRotation(135);
-			}else if(moveY<0){
-				zombie01.setRotation(225);
-			}else zombie01.setRotation(90);
-		}else if((moveX>0 && moveY==0)){
-			if(moveY>0){
-				zombie01.setRotation(45);
-			}else if(moveY<0)
-				zombie01.setRotation(305);
-			else zombie01.setRotation(270);
-		}else if((moveY>0 && moveX==0)){
-			zombie01.setRotation(0);
-		}else if((moveY<0 && moveX==0)){
-			zombie01.setRotation(180);
+		float rotation = (float)Math.toDegrees(4*Math.atan2(personaje.getY()-zombie01.getY(),personaje.getX()-zombie01.getX()));
+		if(rotation<0){
+			rotation= 360 - rotation;
 		}
+		zombie01.setRotation(rotation);
+		System.out.println((float)Math.toDegrees(Math.atan(personaje.getY()/personaje.getX())));
+
+//		if ((moveX>0)&&(moveY>0)){
+//			zombie01.setRotation(315);
+//		}else if ((moveX<0)&&(moveY>0)){
+//			zombie01.setRotation(45);
+//		}else if((moveX<0)&&(moveY<0)){
+//			zombie01.setRotation(135);
+//		}else if((moveX>0)&&(moveY<0)){
+//			zombie01.setRotation(225);
+//		}else {
+//			zombie01.setRotation(personaje.getRotation());
+//			}
+//		System.out.println(moveX+","+moveY+","+deltaTime);
+//		if (moveX<0){
+//			if(moveY>0){
+//				zombie01.setRotation(135);
+//			}else if(moveY<0){
+//				zombie01.setRotation(225);
+//			}else zombie01.setRotation(90);
+//		}else if((moveX>0 && moveY==0)){
+//			if(moveY>0){
+//				zombie01.setRotation(315);
+//			}else if(moveY<0)
+//				zombie01.setRotation(305);
+//			else zombie01.setRotation(270);
+//		}else if((moveY>0 && moveX==0)){
+//			zombie01.setRotation(0);
+//		}else if((moveY<0 && moveX==0)){
+//			zombie01.setRotation(180);
+//		}
 		
+	}
+	
+	public void muerte(){
+	 if (((personaje.getX()-zombie01.getX())<1)&&((personaje.getY()-zombie01.getY())<1)){
+		 System.out.println("Has muerto");
+	 }
 	}
 }
