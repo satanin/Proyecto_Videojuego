@@ -139,6 +139,14 @@ public class GameController extends InputAdapter {
 	}
 	
 	public void zombieMovement(float deltaTime){
+		//Movimiento del zombie y persecución al personaje
+		  float rotation;
+	        if(personaje.getX()>zombie01.getX())
+	            rotation= (float)Math.toDegrees(Math.atan((personaje.getY()-zombie01.getY())/(personaje.getX()-zombie01.getX())))-90;
+	        else
+	            rotation= (float)Math.toDegrees(Math.atan((personaje.getY()-zombie01.getY())/(personaje.getX()-zombie01.getX())))+90;
+	        
+	        zombie01.setRotation(rotation);
 		
 		float moveSpeed2 = 40*deltaTime;
 		float moveX, moveY;
@@ -146,12 +154,12 @@ public class GameController extends InputAdapter {
 		moveY = moviZombieY()*moveSpeed2;
 		
 		moveZombie01(moveX,moveY);
-		float rotation = (float)Math.toDegrees(4*Math.atan2(personaje.getY()-zombie01.getY(),personaje.getX()-zombie01.getX()));
-		if(rotation<0){
-			rotation= 360 - rotation;
-		}
-		zombie01.setRotation(rotation);
-		System.out.println((float)Math.toDegrees(Math.atan(personaje.getY()/personaje.getX())));
+//		float rotation = (float)Math.toDegrees(4*Math.atan2(personaje.getY()-zombie01.getY(),personaje.getX()-zombie01.getX()));
+//		if(rotation<0){
+//			rotation= 360 - rotation;
+//		}
+//		zombie01.setRotation(rotation);
+//		System.out.println((float)Math.toDegrees(Math.atan(personaje.getY()/personaje.getX())));
 
 //		if ((moveX>0)&&(moveY>0)){
 //			zombie01.setRotation(315);
